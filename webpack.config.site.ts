@@ -13,7 +13,7 @@ const config: Configuration = {
   entry: './site/index.tsx',
   output: {
     filename: '[name][contenthash].js',
-    path: path.resolve(__dirname, 'site_dist'),
+    path: path.resolve(__dirname, 'docs'),
   },
   module: {
     rules: [
@@ -29,7 +29,7 @@ const config: Configuration = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './assets/index.html' }), 
+    new HtmlWebpackPlugin({ template: './assets/index.html' }),
     new ForkTsCheckerWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [{ from: 'static' }],
